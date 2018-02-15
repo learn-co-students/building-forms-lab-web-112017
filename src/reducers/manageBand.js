@@ -1,5 +1,5 @@
 export default function manageBand(state = {
-  bands: [],
+  bands: []
 }, action) {
   switch (action.type) {
     case 'ADD_BAND':
