@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 
 class Bands extends Component {
   render(){
+    console.log(this.props)
     return (
       <div>
-        band input
+        {this.props.store.getState().bands.map( (b) => <li>{b}</li>)}
       </div>
     );
   }
