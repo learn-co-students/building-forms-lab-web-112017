@@ -15,10 +15,18 @@ class BandInput extends Component {
     })
   }
 
+  handleSubmit(event) {
+    event.preventDefault()
+    this.props.store.dispatch({
+      type: 'ADD_BAND',
+      band: this.state.text
+    })
+  }
+
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={(event) => this.handleSubmit(event)}>
           <label>add band</label>
           <input
             type="text"
